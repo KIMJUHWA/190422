@@ -19,8 +19,8 @@ public class Main {
 	// 객체(class)  객체변수  대입  생성키워드  객체 생성자
 	//      Var	         v        =      new         Var();
 		
-		//Var v = new Var();  // 객체 생성
-		//v.var();  // 메소드 호출
+		/*Var v = new Var();  // 객체 생성
+		v.var();  // 메소드 호출  보통 많이 씀 */
 		
 		//Var.var();  정적할당(할당된 만큼 메모리 소비) 꼭 필요 할 때만 만든다
 		
