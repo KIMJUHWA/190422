@@ -2,7 +2,7 @@ package com.java0422;
 
 public class Main {
 
-	public static void main(String[] args) {			
+	public void main(String[] args) {			
 		System.out.println("변수 시작!");
 
 		//String  문자열선언;   변수 만들기
