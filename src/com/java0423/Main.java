@@ -4,7 +4,8 @@ public class Main {
 	
 	public static void main(String[] args) {
 		System.out.println("변수 연습");
-		/****************************
+		/**************************** 라인 지우기 단축키 Ctrl + D
+		 * 0. 객체 (object > class)
 		 * 1. 변수
 		 * 2. 메소드 (method)
 		 * 3. 출력
@@ -15,33 +16,14 @@ public class Main {
 		 * 8. 자료형
 		 * 9. 매개변수 (메소드 호출 시 같이 보낼 값)
 		 *****************************/
+	// 객체(class)  객체변수  대입  생성키워드  객체 생성자
+	//      Var	         v        =      new         Var();
 		
-		/*****************************
-		 * 변수 사용법
-		 * 1. 변수 선언
-		 * 2. 변수에 데이터 대입(값 담기)
-		 * 3. 변수 사용
-		 *****************************/
-		int a; //1
-		a=1;  //2
-		System.out.println(a); //3
+		//Var v = new Var();  // 객체 생성
+		//v.var();  // 메소드 호출
 		
-		int b=2; //1,2
-		System.out.println(b); //3
+		//Var.var();  정적할당(할당된 만큼 메모리 소비) 꼭 필요 할 때만 만든다
 		
-		int c,d,e; //1
-		c=a;
-		d=b;
-		e=c+d;
-		System.out.println(e); //3
-		
-		int f;
-		f=a;
-		System.out.println(a);
-		
-		a=10;
-		System.out.println(a);
-		System.out.println(f);
-		
+		new Var();
 	}
 }
