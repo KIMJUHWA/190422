@@ -2,14 +2,20 @@ package com.java0423;
 
 public class Var {
 	
-	public Var() {
-		var();
-	}  // 기본 생성자 - Var v = new Var(); - v.var();
+	public Var() {}  // 기본 생성자 - Var v = new Var(); - v.var();
 
 	// 리턴유형정의  함수명(매개변수)  로직 구현
 	//  void	                var             {}	
 	
-	public  void  var() {  //public static 사용 - Var.var(); 정적할당
+	//전역변수
+	//접근 제한자 4가지
+	public int state1;
+	int state2;
+	protected int state3;
+	private int state4;
+	
+	//지역변수
+	public  void  var() {  //public static void 사용 - Var.var(); 정적할당
 		/*****************************
 		 * 변수 사용법
 		 * 1. 변수 선언
@@ -36,6 +42,6 @@ public class Var {
 		a=10;
 		System.out.println(a);
 		System.out.println(f);		
+		
 	}
-
 }
