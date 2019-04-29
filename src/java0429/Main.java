@@ -8,10 +8,14 @@ public class Main {
 //		System.out.println();
 //		array.t2();
 //		array.t3();
-		array.t4();
-		boolean  result = array.t5(3,0,2,1);
+//		array.t4();
+//		boolean  result = array.t5(3,0,2,1);
+//		System.out.println(result);
+//		array.t6();
+		boolean result = array.t7(2,1,1,1);
 		System.out.println(result);
-		array.t6();
+		array.t8();
+//		array.t9();
 	}
 
 }

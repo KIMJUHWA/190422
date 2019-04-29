@@ -105,7 +105,7 @@ import java.util.Scanner;
 				System.out.println();
 			}
 		}
-		public boolean t5(int ai, int aj, int bi, int bj ) {
+		public boolean t5(int ai, int aj, int bi, int bj ) {  // 출력, ♬ 이동, T/F
 			boolean result = false;
 			int[][] a = {
 					{1,1,1,1,1,1,1,1,1,1},
@@ -129,18 +129,18 @@ import java.util.Scanner;
 					}
 					
 					if(i == ai && j == aj) {
-						System.out.print("♧");
+						System.out.print(" ♬ ");
 					} else if(a[i][j] == 1) {
-						System.out.print("■");
+						System.out.print(" ■ ");
 					}  else {
-						System.out.print("□");
+						System.out.print(" □ ");
 					}
 				}
 				System.out.println();
 				}
 			return result;
 			}
-		public void t6() {
+		public void t6() {  // t4 반복, 입력값(w,s,a,d), i j변화값
 			Scanner scan = new Scanner(System.in);
 			int ai = 1;
 			int aj = 1;
@@ -174,8 +174,94 @@ import java.util.Scanner;
 				} else {
 					bi = ai ;
 					bj = aj;				}
+				if(ai == 8 && aj == 8) {
+					System.out.println("게임이 끝났습니다.");
+					break;
+				}
 			}
 		}
-		
+		public boolean t7(int ai, int aj, int bi, int bj ) {
+			boolean result = false;
+			int[][] arr = {
+					{1,1,1,1,1,1,1,1,1,1},
+					{1,0,0,0,0,0,0,0,0,1},
+					{1,0,1,0,0,0,0,1,0,1},
+					{1,0,0,0,0,0,0,0,0,1},
+					{1,0,0,0,0,1,0,0,0,1},
+					{1,0,0,0,0,0,0,0,0,1},
+					{1,0,1,0,0,0,0,0,1,1},
+					{1,0,0,0,0,0,0,0,0,1},
+					{1,0,0,0,1,0,0,0,0,1},
+					{1,1,1,1,1,1,1,1,0,1}
+			};
+			for(int i = 0; i < arr.length; i++) {
+				for(int j = 0; j < arr[i].length; j++) {
+				
+					if(arr[ai][aj] == 1) {
+						ai = bi;
+						aj = bj;
+						result = true;
+						System.out.println(ai);
+					}
+					if((i == 2 && j == 2)||(i == 2 && j ==7)||(i == 4 && j == 5)
+							||(i == 6 && j == 2)||(i == 6 && j == 8)||(i == 8 && j==4)) {
+						System.out.print("★");
+					} else if(i == ai && j == aj) {
+						System.out.print("♬");
+					} else if(arr[i][j] == 1) {
+						System.out.print("■");
+					} else {
+						System.out.print("□");
+					}
+				}
+				System.out.println();
+			}
+			return result;
+		}
+		public void t8() {
+			Scanner scan = new Scanner(System.in);
+			int ai = 1;
+			int aj = 1;
+			int bi = 1;
+			int bj = 1;
+			t7(ai,aj,bi,bj);
+			while(true) {
+				String input =  scan.next();
+				System.out.println(input.toUpperCase());
+				switch (input.toUpperCase()) {
+					case "W":  // 위쪽
+						ai--;
+						break;
+					case "S":  // 아래쪽
+						ai++;
+						break;
+					case "A":  // 왼쪽
+						aj--;
+						break;
+					case "D":  // 오른쪽
+						aj++;
+						break;
+					default:
+						break;
+				}
+				System.out.println(ai + " , " + aj + " , " + bi + " , " + bj );
+				if(t7(ai,aj,bi,bj)) {  // 이동을 위한 호출 부분
+					ai = bi;
+					aj = bj;
+				} else {
+					bi = ai ;
+					bj = aj;				}
+				if(ai == 9 && aj == 8) {
+					System.out.println("게임이 끝났습니다.");
+					break;
+				}
+			}
+		}
+/*		public boolean t9() {
+			int[][] arr2 = new int [10][10];
+			for()
+		} */
 	}
+	
+
 			
