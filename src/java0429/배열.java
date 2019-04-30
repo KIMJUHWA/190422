@@ -185,29 +185,34 @@ import java.util.Scanner;
 			int[][] arr = {
 					{1,1,1,1,1,1,1,1,1,1},
 					{1,0,0,0,0,0,0,0,0,1},
-					{1,0,1,0,0,0,0,1,0,1},
+					{1,0,2,0,0,0,0,2,0,1},
 					{1,0,0,0,0,0,0,0,0,1},
-					{1,0,0,0,0,1,0,0,0,1},
+					{1,0,0,0,0,2,0,0,0,1},
 					{1,0,0,0,0,0,0,0,0,1},
-					{1,0,1,0,0,0,0,0,1,1},
+					{1,0,2,0,0,0,0,0,2,1},
 					{1,0,0,0,0,0,0,0,0,1},
-					{1,0,0,0,1,0,0,0,0,1},
+					{1,0,0,0,2,0,0,0,0,1},
 					{1,1,1,1,1,1,1,1,0,1}
 			};
+			
 			for(int i = 0; i < arr.length; i++) {
 				for(int j = 0; j < arr[i].length; j++) {
 				
-					if(arr[ai][aj] == 1) {
-						ai = bi;
-						aj = bj;
+					if(arr[ai][aj] == 1) {   // 값이 1이면 가지 못하게 제어
+						ai = bi;      // 전 자리로 되돌아감
+						aj = bj;     // 전 자리로 되돌아감
 						result = true;
 						System.out.println(ai);
 					}
-					if((i == 2 && j == 2)||(i == 2 && j ==7)||(i == 4 && j == 5)
-							||(i == 6 && j == 2)||(i == 6 && j == 8)||(i == 8 && j==4)) {
-						System.out.print("★");
-					} else if(i == ai && j == aj) {
+					
+					if(i == ai && j == aj && arr[i][j] == 2) {   //음표가 지나간 자리 값을 0으로 만들고 싶음
+					 arr[i][j] = 0;	
+					 
+					 
+					} else if(i == ai && j == aj) { 
 						System.out.print("♬");
+					} else if(arr[i][j] == 2) {
+						System.out.print("★");
 					} else if(arr[i][j] == 1) {
 						System.out.print("■");
 					} else {
@@ -216,8 +221,8 @@ import java.util.Scanner;
 				}
 				System.out.println();
 			}
-			return result;
-		}
+				return result;
+			}
 		public void t8() {
 			Scanner scan = new Scanner(System.in);
 			int ai = 1;
@@ -244,7 +249,7 @@ import java.util.Scanner;
 					default:
 						break;
 				}
-				System.out.println(ai + " , " + aj + " , " + bi + " , " + bj );
+//				System.out.println(ai + " , " + aj + " , " + bi + " , " + bj );
 				if(t7(ai,aj,bi,bj)) {  // 이동을 위한 호출 부분
 					ai = bi;
 					aj = bj;

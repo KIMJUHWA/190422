@@ -2,7 +2,7 @@ package java0429;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public void main(String[] args) {
 		배열 array = new 배열();
 //		array.t1();
 //		System.out.println();
@@ -12,8 +12,8 @@ public class Main {
 //		boolean  result = array.t5(3,0,2,1);
 //		System.out.println(result);
 //		array.t6();
-		boolean result = array.t7(2,1,1,1);
-		System.out.println(result);
+		//boolean result = array.t7(2,1,1,1);
+		//System.out.println(result);
 		array.t8();
 //		array.t9();
 	}
